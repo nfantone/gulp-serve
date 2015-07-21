@@ -1,0 +1,36 @@
+{
+  "name": "gulp-serve",
+  "version": "0.0.1",
+  "description": "Gulp 4.0+ plugin that provides common tasks for serving files",
+  "main": "dist/index.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/nfantone/gulp-serve.git"
+  },
+  "tags": [
+    "serve",
+    "static",
+    "gulp",
+    "tasks",
+    "registry"
+  ],
+  "author": "Nicolás Fantone <nfantone@gmail.com> (https://github.com/nfantone)",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.8.0",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-nodemon": "^2.0.3",
+    "gulp-util": "^3.0.6",
+    "http-proxy-middleware": "^0.3.0",
+    "lodash": "^3.10.0",
+    "minimist": "^1.1.1",
+    "path": "^0.11.14",
+    "undertaker-registry": "0.0.3",
+  },
+  "devDependencies": {
+    "gulp-eslint": "^0.15.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "eslint": "^0.24.1"
+  }
+}
