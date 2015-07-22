@@ -1,6 +1,6 @@
 {
   "name": "gulp-serve",
-  "version": "0.0.1",
+  "version": "0.0.1-dev",
   "description": "Gulp 4.0+ plugin that provides common tasks for serving files",
   "main": "dist/index.js",
   "private": true,
