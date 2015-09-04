@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
-	value: true
+  value: true
 });
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -27,29 +27,29 @@ var _libConfig = require('./lib/config');
 var _libConfig2 = _interopRequireDefault(_libConfig);
 
 var GulpServeRegistry = (function (_DefaultRegistry) {
-	_inherits(GulpServeRegistry, _DefaultRegistry);
+  _inherits(GulpServeRegistry, _DefaultRegistry);
 
-	function GulpServeRegistry(options) {
-		_classCallCheck(this, GulpServeRegistry);
+  function GulpServeRegistry(options) {
+    _classCallCheck(this, GulpServeRegistry);
 
-		_get(Object.getPrototypeOf(GulpServeRegistry.prototype), 'constructor', this).call(this);
-		this.config = new _libConfig2['default'](options);
-	}
+    _get(Object.getPrototypeOf(GulpServeRegistry.prototype), 'constructor', this).call(this);
+    this.config = new _libConfig2['default'](options);
+  }
 
-	_createClass(GulpServeRegistry, [{
-		key: 'init',
-		value: function init(taker) {
-			var server = new _libServe2['default'](this.config);
-			var recipes = {
-				serve: taker.series(function start(cb) {
-					server.serve(cb);
-				})
-			};
-			taker.task('serve', recipes.serve);
-		}
-	}]);
+  _createClass(GulpServeRegistry, [{
+    key: 'init',
+    value: function init(taker) {
+      var server = new _libServe2['default'](this.config);
+      var recipes = {
+        serve: taker.series(function start(cb) {
+          server.serve(cb);
+        })
+      };
+      taker.task('serve', recipes.serve);
+    }
+  }]);
 
-	return GulpServeRegistry;
+  return GulpServeRegistry;
 })(_undertakerRegistry2['default']);
 
 exports['default'] = GulpServeRegistry;
